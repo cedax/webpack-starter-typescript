@@ -1,2 +1,2 @@
-import './styles.css';
+import './styles.scss';
 import './assets/codigo.png';

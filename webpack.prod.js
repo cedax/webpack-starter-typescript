@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx|tsx|ts)$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
             },
@@ -42,18 +42,22 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i,
-                exclude: /styles\.css$/i,
-                use: ['style-loader', 'css-loader']
+                test: /\.(scss|css)$/i,
+                exclude: /styles\.scss$/i,
+                use: ["css-loader", "sass-loader"]
             },
             {
-                test: /styles\.css$/i,
+                test: /styles\.scss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader'
+                    'css-loader',
+                    'sass-loader'
                 ]
             }
         ]
+    },
+    resolve: {
+        extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
     },
     plugins: [
         new HtmlWebpackPlugin({

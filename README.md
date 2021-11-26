@@ -2,7 +2,7 @@
 
 Esto es un proyecto iniciar para crear aplicaciones utilizando webpack.
 
-> Tiene soporte para javascript, html, imagenes y css
+> Tiene soporte para javascript, typescript, html, imagenes y scss
 
 ### Notas:
 Ocupas reconstruir los modulos de node
